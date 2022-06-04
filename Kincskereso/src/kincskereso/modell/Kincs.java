@@ -20,7 +20,7 @@ public class Kincs {
         Kincseslada ezust = new Kincseslada(true, "ezüst");
         Kincseslada bronz = new Kincseslada(false, "bronz");
 
-        Kincseslada KLT[] = null;
+        Kincseslada KLT[] = new Kincseslada[3];
 
         KLT[0] = arany;
         KLT[1] = ezust;
@@ -39,11 +39,11 @@ public class Kincs {
 
     }
 
-    private static void win() {
+    public static void win() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static void lost() {
+    public static void lost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
