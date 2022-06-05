@@ -10,14 +10,22 @@ package kincskereso.modell;
  */
 public class Kincseslada {
 
-    public Kincseslada(boolean vanKincs, String minoseg) {
+//    public Kincseslada(boolean vanKincs, String minoseg) {
+//        this.vanKincs = vanKincs;
+//        this.minoseg = minoseg;
+//    }
+    public Kincseslada(boolean vanKincs, String minoseg, String Felirat) {
         this.vanKincs = vanKincs;
         this.minoseg = minoseg;
+        this.Felirat = Felirat;
     }
     
     public boolean vanKincs;
     public String minoseg;
+    String Felirat;
     //const String felirat;
+
+
     
 
 

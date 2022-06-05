@@ -4,13 +4,45 @@
  */
 package kincskereso.teszt;
 
-/**
- *
- * @author makra
- */
+import kincskereso.modell.Kincseslada;
+import kincskereso.modell.Kincs;
+
 public class Tesztelés {
-    public static void main(String[] args) {
-        
+
+    private Kincs kincs;
+    private Kincseslada kincseslada;
+
+    public Tesztelés() {
+
+        System.out.println("------ TESZTESETEK ------");
+
+        tesztKincsArany();
+        tesztKincsEzust();
+        tesztKincsBronz();
     }
-    
-}
+
+    public static void main(String[] args) {
+
+        new Tesztelés();
+    }
+
+    private void tesztKincsArany() {
+        System.out.println("Ha az arany kerül kiválasztásra..");
+        
+       
+    }
+
+    public void tesztKincsEzust() {
+        System.out.println("Ha az ezüst kerül kiválasztásra..");
+
+    }
+
+    ;
+        
+        
+        public void tesztKincsBronz() {
+        System.out.println("Ha az bronz kerül kiválasztásra..");
+    }
+        
+}   
+
