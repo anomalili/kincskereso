@@ -6,7 +6,7 @@ import kincskereso.modell.Kincseslada;
 
 public class KincskeresoGUI extends javax.swing.JFrame {
 
-boolean van;
+    boolean van = true;
 
     public KincskeresoGUI() {
         initComponents();
@@ -260,21 +260,18 @@ boolean van;
     }// </editor-fold>//GEN-END:initComponents
 
     private void kincsAranyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kincsAranyActionPerformed
-        ell();
-        visszajelzes();
+        ell(0);
 
     }//GEN-LAST:event_kincsAranyActionPerformed
 
     private void kincsEzustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kincsEzustActionPerformed
-        ell();
-        visszajelzes();
+        ell(1);
 
 
     }//GEN-LAST:event_kincsEzustActionPerformed
 
     private void kincsBronzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kincsBronzActionPerformed
-        ell();
-        visszajelzes();
+        ell(2);
     }//GEN-LAST:event_kincsBronzActionPerformed
 
     private void ujraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ujraActionPerformed
@@ -291,36 +288,36 @@ boolean van;
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-
-  
-        
-        
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new KincskeresoGUI().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//
+//  
+//        
+//        
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(KincskeresoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new KincskeresoGUI().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton5;
@@ -347,21 +344,8 @@ boolean van;
     private javax.swing.JButton ujra;
     // End of variables declaration//GEN-END:variables
 
-    private void visszajelzes() {
-        if (van == true) {
-            jLabel5.setText("");
-            jLabel4.setText("Gratulálok! Helyes válasz!");
-        } else {
-            jLabel5.setText("");
-            jLabel4.setText("Sajnos nem jó válasz!");
-        }
+    public boolean ell(int szam) {
 
-    }
-    
-    public void ell(){
-        
-       
-    
         Kincseslada arany = new Kincseslada(false, "arany", "Én rejtem a Kincset!");
         Kincseslada ezust = new Kincseslada(true, "ezüst", "Nem én rejtem a kincset!");
         Kincseslada bronz = new Kincseslada(false, "bronz", "Az arany hazudik!");
@@ -372,18 +356,23 @@ boolean van;
         KLT[1] = ezust;
         KLT[2] = bronz;
 
-       
+        boolean van = false;
 
         for (int i = 0; i < KLT.length; i++) {
-            if (KLT[i].vanKincs == true) {
+            if (KLT[szam].vanKincs == true) {
                 van = true;
+                jLabel5.setText("");
+                jLabel4.setText("Gratulálok! Helyes válasz!");
+
             } else {
                 van = false;
+                jLabel5.setText("");
+                jLabel4.setText("Sajnos nem jó válasz!");
             };
 
         }
-    
+
+        return van;
+
     }
-    
-   
 }

@@ -4,12 +4,17 @@
  */
 package kincskereso.modell;
 
-/**
- *
- * @author makra
- */
+import kincskereso.nezet.KincskeresoGUI;
+
+
 public class Kincs {
     boolean van = false;
+    
+    public Kincs(){
+    
+        start();
+    
+    }
 
     public void vanK () {
 
@@ -33,6 +38,13 @@ public class Kincs {
             };
 
         }
+    }
+
+    private void start() {
+        
+        new KincskeresoGUI().setVisible(true);
+            
+
     }
 
 }

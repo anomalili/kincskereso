@@ -4,17 +4,20 @@
  */
 package kincskereso;
 
+import kincskereso.modell.Kincs;
+import kincskereso.nezet.KincskeresoGUI;
+
 /**
  *
  * @author makra
  */
-public class Main {
+public class Program {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       new Kincs();
     }
     
 }
