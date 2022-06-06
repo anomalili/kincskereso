@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package kincskereso.teszt;
 
 import kincskereso.modell.Kincseslada;
@@ -11,6 +8,7 @@ public class Tesztelés {
 
     private Kincs kincs;
     private Kincseslada kincseslada;
+    private boolean van;
 
     public Tesztelés() {
 
@@ -27,12 +25,13 @@ public class Tesztelés {
     }
 
     private void tesztKincsArany() {
-        System.out.println("Ha az arany kerül kiválasztásra..");
-        
-       
+        kincs.vanK(0);
+        System.out.println("Arany teszt:");
+
     }
 
     public void tesztKincsEzust() {
+        kincs.vanK(1);
         System.out.println("Ha az ezüst kerül kiválasztásra..");
 
     }
@@ -41,8 +40,8 @@ public class Tesztelés {
         
         
         public void tesztKincsBronz() {
+        kincs.vanK(2);
         System.out.println("Ha az bronz kerül kiválasztásra..");
     }
-        
-}   
 
+}

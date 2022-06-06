@@ -16,7 +16,7 @@ public class Kincs {
     
     }
 
-    public void vanK () {
+    public void vanK (int szam) {
 
         Kincseslada arany = new Kincseslada(false, "arany", "Én rejtem a Kincset!");
         Kincseslada ezust = new Kincseslada(true, "ezüst", "Nem én rejtem a kincset!");
@@ -31,7 +31,7 @@ public class Kincs {
        
 
         for (int i = 0; i < KLT.length; i++) {
-            if (KLT[i].vanKincs == true) {
+            if (KLT[szam].vanKincs == true) {
                 van = true;
             } else {
                 van = false;
